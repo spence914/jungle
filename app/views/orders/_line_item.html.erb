@@ -2,7 +2,7 @@
         <td><%= item.product.name %> <%= image_tag item.product.image.thumb.url , alt: item.product.name %> </td>
         <td><%= item.product.description %></td>
         <td><%= item.quantity %></td>
-        <td>$<%= item.item_price_cents  / 100 %></td>
-        <td>$<%= (item.item_price_cents  / 100) * (item.quantity) %></td>
+        <td>$<%= item.item_price_cents.to_f  / 100 %></td>
+        <td>$<%= (item.item_price_cents.to_f  / 100) * (item.quantity) %></td>
         
       </tr>

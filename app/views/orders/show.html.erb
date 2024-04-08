@@ -23,7 +23,7 @@
 
   <div class="order-summary jumbotron">
 <p> Order Email: <%= @order.email %></p>
-  <p>Order Total: $<%= @order.total_cents / 100%></p>
+  <p>Order Total: $<%= @order.total_cents.to_f / 100%></p>
     <h4>Thank you for your order!</h4>
   </div>
 
