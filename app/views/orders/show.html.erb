@@ -4,7 +4,33 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Product </th>
+      <th>Description</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Subtotal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @line_items.each do |item| %>
+      <tr>
+        <td><%= item.product.name %> <%= image_tag item.product.image.thumb.url , alt: item.product.name %> </td>
+        <td><%= item.product.description %></td>
+        <td><%= item.quantity %></td>
+        <td>$<%= item.item_price_cents  / 100 %></td>
+        <td>$<%= (item.item_price_cents  / 100) * (item.quantity) %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
   <div class="order-summary jumbotron">
+<p> Order Email: <%= @order.email %></p>
+  <p>Order Total: $<%= @order.total_cents / 100%></p>
     <h4>Thank you for your order!</h4>
   </div>
 
