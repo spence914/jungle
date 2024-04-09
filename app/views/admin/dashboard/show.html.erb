@@ -7,8 +7,9 @@
                 </div>
                 <div class="card-body">
                     <p>There are currently <strong><%= @product_count %></strong> 
-                    <a href="http://localhost:3000/admin/products" >products</a>
-                    in the store in <strong><%= @categories_count %></strong> categories.</p>
+                    <%= link_to 'Products', [:admin, :products]%>
+                    in the store in <strong><%= @categories_count %></strong>
+                      <%= link_to 'Categories', [:admin, :categories]%></p>
                 </div>
             </div>
         </div>
