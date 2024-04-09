@@ -1,2 +1,16 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="h3">Admin Dashboard</h1>
+                </div>
+                <div class="card-body">
+                    <p>There are currently <strong><%= @product_count %></strong> 
+                    <a href="http://localhost:3000/admin/products" >products</a>
+                    in the store in <strong><%= @categories_count %></strong> categories.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
