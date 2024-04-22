@@ -4,7 +4,7 @@ RSpec.describe Product, type: :model do
   describe 'Validations' do
     it "is valid with all fields filled in" do
       category = Category.new(name: "Test")
-      product = Product.new(name: "Sample", price: 10, quantity: 1, category: category)
+      product = Product.new(name: "Sample", price_cents: 10, quantity: 1, category: category)
       expect(product).to be_valid
       
     end
